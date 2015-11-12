@@ -10,7 +10,15 @@ public interface IFunctions extends Remote{
     //Función para obtener la ubicacion actual en el directorio
     String getPath(String root) throws RemoteException;
     //Función para crear un directorio
-    void mkdir(String pName,String pRoot) throws RemoteException;
+    boolean mkdir(String pName,String pRoot) throws RemoteException;
     //Función cd
     boolean cd(String pNewPath,String pRoot) throws RemoteException;
+    //Funcion para crear un archivo en el directorio actual
+    String file(String pFileName,String pContent,String pPath,String pRoot) throws RemoteException;
+    //Funcion ls lista todos los archivos y directorios del directorio actual
+    String ls(String pRoot) throws RemoteException;
+    //Funcion mv: mueve un archivo o directorio hacia otro lugar o 
+    // si se mueve a su mismo directorio se cambia el nombre
+    boolean mv(String[] params, String pRoot) throws RemoteException;
+    
 }
