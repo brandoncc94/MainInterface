@@ -14,11 +14,13 @@ public interface IFunctions extends Remote{
     //Función cd
     boolean cd(String pNewPath,String pRoot) throws RemoteException;
     //Funcion para crear un archivo en el directorio actual
-    String file(String pFileName,String pContent,String pPath,String pRoot) throws RemoteException;
+    boolean createFile(String pFileName,String pContent,String pPath,String pRoot) throws RemoteException;
     //Funcion ls lista todos los archivos y directorios del directorio actual
     String ls(String pRoot) throws RemoteException;
     //Funcion mv: mueve un archivo o directorio hacia otro lugar o 
     // si se mueve a su mismo directorio se cambia el nombre
     boolean mv(String[] params, String pRoot) throws RemoteException;
+    //Función para mostrar el contenido de un archivo
+    String cat(String[] filenames, String pRoot) throws RemoteException;
     
 }
