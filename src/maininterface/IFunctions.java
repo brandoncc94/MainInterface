@@ -22,5 +22,6 @@ public interface IFunctions extends Remote{
     boolean mv(String[] params, String pRoot) throws RemoteException;
     //Función para mostrar el contenido de un archivo
     String cat(String[] filenames, String pRoot) throws RemoteException;
-    
+    //Función para eliminar uno o varios archivos, así como directorios
+    boolean rm(String[] filenames, boolean isDir, String pRoot) throws RemoteException;
 }
