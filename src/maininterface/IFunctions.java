@@ -8,7 +8,7 @@ public interface IFunctions extends Remote{
     //Función para crear espacio virtual en el disco
     String create(int pSize) throws RemoteException;
     //Función para obtener la ubicacion actual en el directorio
-    String getPath(String root) throws RemoteException;
+    String getActualPath(String root) throws RemoteException;
     //Función para crear un directorio
     boolean mkdir(String pName,String pRoot) throws RemoteException;
     //Función cd
