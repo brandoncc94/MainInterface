@@ -26,5 +26,7 @@ public interface IFunctions extends Remote{
     boolean rm(String[] filenames, boolean isDir, String pRoot) throws RemoteException;
     //Función para mostrar el tamaño de un directorio o archivo
     int du(String pName, String pRoot) throws RemoteException;
+    //Función para buscar archivos o directorios y mostrar su ruta
+    String find(String pName, String pRoot) throws RemoteException;
     
 }
