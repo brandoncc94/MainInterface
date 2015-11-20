@@ -28,5 +28,7 @@ public interface IFunctions extends Remote{
     int du(String pName, String pRoot) throws RemoteException;
     //Función para buscar archivos o directorios y mostrar su ruta
     String find(String pName, String pRoot) throws RemoteException;
+    //Función que genera una arbol simulando la estructura de archivos a partir del directorio actual
+    String tree(String pRoot) throws RemoteException;
     
 }
