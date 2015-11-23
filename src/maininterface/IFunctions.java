@@ -30,5 +30,8 @@ public interface IFunctions extends Remote{
     String find(String pName, String pRoot) throws RemoteException;
     //Función que genera una arbol simulando la estructura de archivos a partir del directorio actual
     String tree(String pRoot) throws RemoteException;
+    //Función para copiar archivos o directorios
+    boolean cpy(String[] paths, int type, String root) throws RemoteException;
+
     
 }
